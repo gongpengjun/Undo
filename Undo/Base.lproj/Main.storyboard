@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Gpj View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="GpjViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6k-M7-sWu">
+                                <rect key="frame" x="20" y="491" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Redo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="redoAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ojV-Hu-lHO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KP-p1-DrM">
+                                <rect key="frame" x="113" y="491" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Color">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeColorAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wKy-OL-UfC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-jO-XiA">
+                                <rect key="frame" x="262" y="491" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Undo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="undoAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ye3-RN-xbh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmf-fT-zJW">
+                                <rect key="frame" x="80" y="78" width="160" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="3il-me-hml"/>
+                                    <constraint firstAttribute="width" constant="160" id="dy4-5L-UNM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="pmf-fT-zJW" secondAttribute="centerX" id="1MS-s2-jvD"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="h6k-M7-sWu" secondAttribute="bottom" constant="47" id="CWc-32-i8R"/>
+                            <constraint firstItem="h6k-M7-sWu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="K0r-cv-sL6"/>
+                            <constraint firstAttribute="trailing" secondItem="8Bz-jO-XiA" secondAttribute="trailing" constant="20" id="T6J-Dr-oYB"/>
+                            <constraint firstItem="pmf-fT-zJW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="58" id="fBb-T0-ual"/>
+                            <constraint firstAttribute="centerX" secondItem="9KP-p1-DrM" secondAttribute="centerX" id="j3v-cd-gMU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9KP-p1-DrM" secondAttribute="bottom" constant="47" id="jK0-iq-VbJ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8Bz-jO-XiA" secondAttribute="bottom" constant="47" id="lAP-f7-E1t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="changeColorButton" destination="9KP-p1-DrM" id="XTf-k2-Lg1"/>
+                        <outlet property="editingView" destination="pmf-fT-zJW" id="HGc-kL-BAR"/>
+                        <outlet property="redoButton" destination="h6k-M7-sWu" id="jjV-Og-MD9"/>
+                        <outlet property="undoButton" destination="8Bz-jO-XiA" id="0pD-Ii-wcB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
